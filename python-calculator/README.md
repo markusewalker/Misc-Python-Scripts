@@ -7,9 +7,9 @@ Python script that functions as a simple calculator performing addition, subtrac
 To utilize this script, please follow the below workflow:
 
 (1) Clone the script into your environment.\
-(2) Make sure latest version of Python 3 is installed on the environment.
+(2) Make sure latest version of Python 3 is installed on the environment.\
 (3) Run the script: **python3 calculator.py**
 
 See below an image of the script in action:
-![Image of Calculator](https://github.com/markusewalker/Misc-Python-Scripts/blob/master/python-calculator/calculator.png)
+![Image of Calculator](https://github.com/markusewalker/Misc-Python-Scripts/blob/main/python-calculator/calculator.png)
 `
