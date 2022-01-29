@@ -9,33 +9,31 @@
 #   2. Subtraction
 #   3. Multiplication
 #   4. Division
+import argparse
 
-# This function adds two numbers
 def addition(x, y):
     return x + y
 
-# This function subtracts two numbers
 def subtraction(x, y):
     return x - y
 
-# This function multiplies two numbers
 def multiplication(x, y):
     return x * y
 
-# This function divides two numbers
 def division(x, y):
     return x / y
 
-def main():
+# Function to interactively run the script if the user chose option 2.
+def interactive():
     welcome = """
-Welcome to the Simple Python Calculator! Please find the below supported operations:
- 
+    Welcome to the Simple Python Calculator! Please find the below supported operations:
+
     1. Addition
     2. Subtraction
     3. Multiplication
     4. Division
 
-To keep it simple, this calculator takes only two numbers as input.
+    To keep it simple, this calculator takes only two numbers as input.
     """
     print(welcome)
 
@@ -68,6 +66,35 @@ To keep it simple, this calculator takes only two numbers as input.
                 break
         else:
             print("ERROR. You must choose a number in the range 1-4. Please try again...")
+
+def main():
+    parser = argparse.ArgumentParser(description="Performs the following operations: addition, subtraction, multiplication or division.")
+    parser.add_argument('mode', metavar='mode', type=int, help="runs the script in interactive or silent mode: 1 for silent, 2 for interactive. If interactive, run the other command-line flags as well.")
+    parser.add_argument("-n1", "--number1", type=int, help="first number to input")
+    parser.add_argument("-n2", "--number2", type=int, help="second number to input")
+    parser.add_argument("-o", "--operation", help="operation to perform: 'add', 'sub', 'mult', 'div'")
+
+    # Read in the above arguments and assign num1 and num2 to the user inputted numbers. 
+    args = parser.parse_args()
+    num1 = args.number1
+    num2 = args.number2
+
+    # If user chooses option 1, then run in silent mode.
+    if args.mode == 1:
+        # Depending on operation chose, perform the respective calculation with the two numbers.
+        if args.operation == "add":
+            print(f"{num1} + {num2} =", addition(num1, num2))
+        elif args.operation == "sub":
+            print(f"{num1} - {num2} =", subtraction(num1, num2))
+        elif args.operation == "mult":
+            print(f"{num1} * {num2} =", multiplication(num1, num2))
+        elif args.operation == "div":
+            print(f"{num1} / {num2} =", division(num1, num2))
+    # If user chooses option 2, then run in interactive mode.
+    elif args.mode == 2:
+        interactive()
+    else:
+        print("ERROR. Supported operations are 1 or 2. Please try again.")
 
 if __name__ == "__main__":
     main()
