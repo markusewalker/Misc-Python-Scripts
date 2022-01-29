@@ -6,7 +6,7 @@ Python script that functions as a simple calculator performing addition, subtrac
 This script can be ran interactively or silently using command-line arguments. This is further illustrated below.
 
 ### Getting Started
-To utilize this scrip in the command-line, please follow the below workflow:
+To utilize this script in the command-line, please follow the below workflow:
 
 (1) Clone the script into your environment.\
 (2) Make sure latest version of Python 3 is installed on the environment.\
