@@ -9,7 +9,6 @@
 #   2. Subtraction
 #   3. Multiplication
 #   4. Division
-import argparse
 
 # This function adds two numbers
 def addition(x, y):
