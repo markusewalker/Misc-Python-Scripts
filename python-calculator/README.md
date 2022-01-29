@@ -17,4 +17,3 @@ Additionally, this can be ran from your Python IDE of choice such as PyCharm, ID
 
 See below an image of the script in action:
 ![Image of Calculator](https://github.com/markusewalker/Misc-Python-Scripts/blob/main/python-calculator/calculator.png)
-`
