@@ -1,4 +1,4 @@
-# Bash Calculator
+# Python Calculator
 
 ### Description
 Python script that functions as a simple calculator performing addition, subtraction, multiplication and division. Integers and floating point numbers are both accepted in this calculator. The user can specify which operation is performed however many times they wish to and can end the program at any time that they are satisfied.
