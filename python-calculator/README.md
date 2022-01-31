@@ -10,7 +10,7 @@ To utilize this script in the command-line, please follow the below workflow:
 
 (1) Clone the script into your environment.\
 (2) Make sure latest version of Python 3 is installed on the environment.\
-(3) Run the script silently: **python3 calculator.py 1 -n1 <number> -n2 <number> -o <operation>**
+(3) Run the script silently: **python3 calculator.py 1 -n1 <number> -n2 <number> -o <operation>**.\
 (4) Run the script interactively: **python3 calculator.py 2**
 
 Additionally, this can be ran from your Python IDE of choice such as PyCharm, IDLE, Visual Studio Code, etc.
