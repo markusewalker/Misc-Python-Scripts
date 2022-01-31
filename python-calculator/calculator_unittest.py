@@ -8,7 +8,6 @@
 # of the calculator.py script.
 from calculator import *
 import unittest
-from unittest.mock import patch
 
 class TestCalculator(unittest.TestCase):
     def test_addition(self):
