@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 # Authored By: Markus Walker
-# Date Modified: 1/28/22
+# Date Modified: 1/29/22
 #
 # Descrption: Simple calculator written in Python 3. It provides the following
 # operations:
