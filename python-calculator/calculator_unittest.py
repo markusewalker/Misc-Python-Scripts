@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # Authored By: Markus Walker
 # Date Modified: 1/30/22
