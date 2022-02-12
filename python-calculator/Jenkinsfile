@@ -4,7 +4,7 @@ pipeline {
         stage('Run Unit Tests') {
             steps {
                 sh 'cd python-calculator'
-                sh 'python3 calculator_unittest.py'
+                sh 'python3 -m unittest calculator_unittest.py'
             }
         }
     }
