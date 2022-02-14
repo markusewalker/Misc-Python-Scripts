@@ -26,5 +26,17 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(division(20,10), 2.0)
         self.assertNotEqual(division(20,10), 200.0)
 
+    def test_remainder(self):
+        self.assertEqual(remainder(20,10), 0.0)
+        self.assertNotEqual(remainder(20,10), 1.0)
+
+    def test_squared(self):
+        self.assertEqual(squared(2,10), 1024.0)
+        self.assertNotEqual(squared(2,10), 512.0)
+
+    def test_cubed(self):
+        self.assertEqual(cubed(2,10), 2048.0)
+        self.assertNotEqual(cubed(2,10), 512.0)
+
 if __name__ == "__main__":
     unittest.main()
