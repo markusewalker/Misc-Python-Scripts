@@ -93,7 +93,7 @@ def main():
     parser.add_argument('mode', metavar='mode', type=int, help="runs the script in interactive or silent mode: 1 for silent, 2 for interactive. If interactive, run the other command-line flags as well.")
     parser.add_argument("-n1", "--number1", type=int, help="first number to input")
     parser.add_argument("-n2", "--number2", type=int, help="second number to input")
-    parser.add_argument("-o", "--operation", help="operation to perform: 'add', 'sub', 'mult', 'div', 'rem', 'squ', 'cube'")
+    parser.add_argument("-o", "--operation", help="operation to perform: 'add', 'sub', 'mult', 'div', 'rem', 'squ', 'cube'", action="store_true")
 
     # Read in the above arguments and assign num1 and num2 to the user inputted numbers. 
     args = parser.parse_args()
