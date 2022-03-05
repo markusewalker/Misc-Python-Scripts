@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Run Unit Tests') {
             steps {
-                sh 'python3 encrypt-passwords/src/encrpytpw_unittest.py'
+                sh 'python3 encrypt-passwords/src/encryptpw_unittest.py'
             }
         }
     }
