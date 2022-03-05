@@ -1,0 +1,10 @@
+pipeline {
+    agent any 
+    stages {
+        stage('Run Unit Tests') {
+            steps {
+                sh 'python3 encrypt-passwords/src/encrpytpw_unittest.py'
+            }
+        }
+    }
+}
