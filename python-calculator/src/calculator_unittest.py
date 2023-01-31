@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
 
 # Authored By: Markus Walker
-# Date Modified: 1/30/22
+# Date Modified: 1/31/23
 #
-# Descrption: Unit test for the calculator.py script. Several unit tests 
-# against the addition, subtraction, multiplication and division functions
-# of the calculator.py script.
+# Descrption: Unit test for the calculator.py script.
 from calculator import *
 import unittest
 

@@ -1,23 +1,28 @@
 #!/usr/bin/env python3
 #
 # Authored By:      Markus Walker   
-# Date Modified:    3/4/22
+# Date Modified:    1/31/23
 #
 # Description: Encrypts passwords using the Fernet cryptography method.
 
 import argparse, getpass
 from cryptography.fernet import Fernet
 
-# Function to encrypt passwords using Fernet cryptography.
 def encryption(password):
-    # Instance the Fernet class with the key variable...
     key = Fernet.generate_key()
     fernet = Fernet(key)
 
-    # Encoding to byte string before we can actually encrypt...
     new_pass = fernet.encrypt(password.encode())
 
     return new_pass
+
+def output(password, result):
+    with open("pass.txt", "w") as text_file:
+        print(f"{password}", file=text_file)
+        print(f"{result}", file=text_file)
+    text_file.close()
+    
+    print("Key and encrypted password have been saved to pass.txt")
 
 def main():
     parser = argparse.ArgumentParser(description="Encrypts user-inputted passwords using Fernet cryptography")
@@ -26,12 +31,9 @@ def main():
 
     args = parser.parse_args()
 
-    # If user chooses option 1, run script silently. Else, if user chooses option 2, run script interactively.
     if args.mode == 1:
-        # Print out the initial password along with the encrypted password.
         result = encryption(args.password)
-        print(f"\nKey: {args.password}")
-        print(f"\nEncrypted Password: {result}\n")
+        output(args.password, result)
     elif args.mode == 2:
         welcome = """
 Welcome to the Encrypt Passwords tool! This will take user-inputted passwords and
@@ -39,11 +41,9 @@ encrypt them using the Fernet cryptography method.
 """
         print(welcome)
 
-        # Once password is received, print the key along with the encrypted password.
         password = getpass.getpass(prompt="Please enter a password that will be used as a key to encrypt: ")
         result = encryption(password)
-        print(f"\nKey: {password}")
-        print(f"\nEncrypted Password: {result}\n")
+        output(password, result)
 
 if __name__ == "__main__":
     main()
